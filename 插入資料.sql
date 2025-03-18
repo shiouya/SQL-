@@ -208,10 +208,6 @@ VALUES
 ('Training Room D', 50, NULL, 'Basement'),
 ('Small Meeting Room E', 8, NULL, 'Third Floor');
 
-INSERT INTO meeting (title, notes, start_time, end_time, employee_id, room_id, status_id)
-VALUES 
-('產品開發會議', '討論新產品的開發進度', '2025-03-10 10:00:00', '2025-03-10 12:00:00', 1001, 1, 1),
-('行銷策略會議', '規劃 Q2 行銷活動', '2025-03-11 14:00:00', '2025-03-11 16:00:00', 1002, 2, 2);
 
 INSERT INTO [dbo].[employee_roles]
            ([employee_id]
@@ -260,12 +256,6 @@ VALUES
 ('審核中', '表單狀態'),
 ('已審核', '表單狀態'),
 ('已核決', '表單狀態');
-
-INSERT INTO status (status_name, status_type) 
-VALUES 
-('審核中', '文件狀態'),
-('核准', '文件狀態'),
-('未核准', '文件狀態');
 
 
 --插入meeting資料 分兩次插入 需要時間差 失敗的話檢查room_id和status_id

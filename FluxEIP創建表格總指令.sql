@@ -413,17 +413,13 @@ foreign key (department_id) references department(department_id)
 )                                                    --部門行事曆
 
 -- 公佈欄表
-create table bulletin_board(
+create table bulletin(
 id int primary key identity(1,1) not null, 
-creater_id int not null,                         --發布者
-content nvarchar(max) ,                                --內容
-status_id int not null,                                --狀態
-created_at datetime not null,                          --建立日期
-finish_date datetime not null,                         --結束
---[file]  VARBINARY(MAX)                                 --附加圖片   檔案?
-
-foreign key (creater_id) references employee(employee_id), -- 發布者外鍵
-);                                                     --公佈欄
+title nvarchar(50) not null ,                            --標題
+creater nvarchar(50) not null,                        --發布者
+content nvarchar(max) ,                                 --內容
+status_id int not null,                                     --狀態
+created_at datetime not null)                         --建立日期
 
 -- 智庫表
 CREATE TABLE guideline (
