@@ -396,7 +396,7 @@ create table repair (
 create table personal_calendar(
 id int primary key identity(1,1) not null, 
 employee_id int not null  ,                          --員工id
-created_at  datetime not null,                            --開始
+start_date  datetime not null,                            --開始
 finish_date datetime not null,                           --結束
 content nvarchar(max),                            --內容
 foreign key (employee_id) references employee(employee_id)
